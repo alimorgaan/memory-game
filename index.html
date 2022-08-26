@@ -7,15 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <title>Memory game</title>
 </head>
 
 <body>
+    <div class="overlay" id="overlay">
+        <button class="startButton" id="startButton">Start Game</button>
+        <div class="won" id="won">
+            Congratulations you won
+            <button class="playAgain refresh">Play Again</button>
+        </div>
+        <div class="lose" id="lose">
+            You Lost !!
+            <button class="tryAgain refresh">Try Again</button>
+        </div>
+    </div>
     <div class="main-content">
         <div class="status">
             <div class="player-name">
+                player name : <span id="playerName"></span>
             </div>
-            <div class="wrong">
+            <div>
+                wrong tries : <span id="wrong"></span>
             </div>
         </div>
         <div class="cards-container" id="cardsContainer">

@@ -2,13 +2,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Cairo', sans-serif;
 }
 
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    height: 100vh;
 }
 
 .main-content{
@@ -37,14 +38,15 @@ body{
 }
 
 .card{
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     background-color: brown;
     position: relative;
     transform-style: preserve-3d;
     transition: 0.8s;
+    cursor: pointer;
 }
- .flipped{
+.flipped{
     transform: rotateY(180deg);
 } 
 
@@ -76,4 +78,63 @@ body{
 
 .checked{
     pointer-events: none;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay button {
+    padding: 10px;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.startButton{
+    background-color: orangered;
+}
+.won{
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    display: none;
+    width: 500px;
+    border-radius: 5px;
+    
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.lose{
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: red;
+    font-size: 40px;
+    display: none;
+    width: 500px;
+    border-radius: 5px;
+    
+    flex-direction: column;
+    gap: 10px;
+}
+
+.playAgain{
+    background-color: rgb(61, 238, 55);
+}
+
+.tryAgain{
+    background-color: rgb(27, 141, 194);
 }
