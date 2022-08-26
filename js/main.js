@@ -77,7 +77,7 @@ cards.forEach(card => {
             selectedCards.push(e.currentTarget); 
             if (checkSimilar()) {
                 checkCards(selectedCards);
-                checkAudio.play(); 
+                setTimeout(() => {checkAudio.play(); } , 400)
                 rightMatches++; 
                 if (rightMatches === 10 && wrongTries < 10) {
                     overlay.style.display = 'flex'; 
